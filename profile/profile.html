@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me</title>
+  <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+  <header>
+    Introduction
+  </header>
+  <main>  
+    <div id="profileBox">
+      <div id="photoBox">
+        <img src="images/profile.jpg" alt="프로필 사진" height="200px" width="200px">
+      </div>
+      <div class="intro">
+        <h2>Welcome to My Introduction Page</h2>
+        <I>Hello, my name is Suyoung. I am a student majoring in Computer Science at Korea University, a private university in South Korea.
+        I have a strong interest in full-stack development and the startup ecosystem. I am passionate about creating innovative solutions and products that can make a positive impact on the world. Nice to meet you!</p>
+        <p>I am currently a member of the following clubs: <a href="https://www.instagram.com/gdsc.koreauniv/">GDSC KU</a>, <a href="https://www.instagram.com/koreauniv_habitat/">KU Habitat</a></p>
+        <hr>
+        <p>Find more about me on:</p>
+        <div id="links">
+          <a href="https://blog.naver.com/swimzero04"><img src="images/naver.png" height="40px"></a>
+          <a href="https://www.instagram.com/swimzro/"><img src="images/instagram.png" height="40px"></a>
+          <a href="https://github.com/swimzero"><img src="images/github.png" height="40px"></a>
+        </div>
+      </div>
+    </div>
+  <h2>Education</h2>
+  <hr>
+  <ul>
+    <li>SeoJeong Elementary School (2012~2016)</li>
+    <li>Mogun Middle School (2017~2019)</li>
+    <li>YangChung High School (2020~2022)</li>
+    <li>Korea University (2023~)</li>
+  </ul>
+  <br/>
+  <h2>Portfolio</h2>
+  <hr>
+  <h3>Mogun Student Council (2019.3~2020.2)</h3>
+  <ul>
+    <li>Served as the Director of the Culture Department in the Mogun Student Council</li>
+  </ul>
+  <h3>YangChung Student Council (2020.9~2021.8)</h3>
+  <ul>
+    <li>Worked as the Deputy General Manager of the YangChung 70th Student Council</li>
+  </ul>
+  <h3>Student Vice President of YangChung High School (2021.9~2022.8)</h3>
+  <ul>
+    <li>Served as the Student Vice President of YangChung High School (71st)</li>
+    <li>Learn more about "YangChung Student Council" on my <a href="https://blog.naver.com/swimzero04/223119346049">blog</a> and <a href="https://www.instagram.com/mad_for_yangchung/">official account</a></li>
+  </ul>
+  <h3>Chief Product Officer at Vista Korea (2023.10~)</h3>
+  <ul>
+    <li>Worked as the Chief Product Officer (CPO) at Vista Korea, a startup that provides services for foreigners in South Korea.</li>
+  </ul>
+  <br/>
+  <h2>Contact</h2>
+  <hr>
+  <h3>Email</h3>
+  <ul>
+    <li>swimzero04@korea.ac.kr</li>
+  </ul>
+  <h3>Phone Number</h3>
+  <ul>
+    <li>010-9174-7604</li>
+  </ul>
+  <div id="topButton" onclick="scrollToTop()"><b>TOP</b></div>
+  </main>
+  <footer>
+    <p>Life is What You Make of It</p>
+  </footer>
+
+  <script>
+    // 페이지 상단으로 스크롤
+    function scrollToTop() {
+      window.scroll({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+      });
+    }
+
+    // 스크롤 위치에 따라 "top" 버튼을 표시/숨김
+    window.onscroll = function() {
+      var topButton = document.getElementById("topButton");
+      if (document.documentElement.scrollTop > 100) {
+        topButton.style.display = "block";
+      } else {
+        topButton.style.display = "none";
+      }
+    };
+  </script>
+</body>
+</html>
