@@ -7,7 +7,7 @@ function App() {
   let [inp, setInp] = useState('');
   let [detailInp, setDetailInp] = useState('');
 
-  const handleGoalSubmit = () => {
+  const goalSetting = () => {
     if (inp.trim() !== '') {
       const newGoal = { text: inp, detail: detailInp, date: new Date() };
       setGoals([...goals, newGoal]);
@@ -16,10 +16,14 @@ function App() {
     }
   };
 
+  const goalDelete=()=>{
+    setGoals([])
+  }
+
   return (
     <div className="App">
       <div className='nav'>
-        <h4>ToDo List</h4>
+        <h4>못하면 걍 죽자</h4>
       </div>
       <div className='adder'>
         <h5>목표를 설정하세요</h5>
@@ -30,7 +34,10 @@ function App() {
           onChange={(e) => setDetailInp(e.target.value)}
           placeholder="상세 입력"
         />
-        <button onClick={handleGoalSubmit}>목표설정</button>
+        <div className='buttons'>
+        <button id='goalSetting' onClick={goalSetting}>목표설정</button>
+        <button id='goalDelete' onClick={goalDelete}>목표삭제</button>
+        </div>
       </div>
 
       {goals.map(function (goal, index) {
@@ -41,7 +48,7 @@ function App() {
             <p onClick={() => {
               setModalState(prevState => ({
                 ...prevState,
-                [index]: !prevState[index]
+              [index]: !prevState[index] /*지피티가 바꿈*/
               }));
             }}>상세 목표</p>
 

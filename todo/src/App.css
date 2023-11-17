@@ -29,8 +29,22 @@
   border: 1px solid #DBDBDB;
   border-radius: 5px;
 }
+.buttons{
+  display: flex;
+}
 
-.adder button {
+#goalSetting {
+  background-color: #FF5252;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+#goalDelete{
+  margin-left:20px;
   background-color: #FF5252;
   color: white;
   border: none;
@@ -65,5 +79,3 @@
   border-radius: 5px;
   box-shadow: 0px 0px 10px #DBDBDB;
 }
-
-/* Add more styles as needed */
