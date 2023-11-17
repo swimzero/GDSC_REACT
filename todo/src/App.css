@@ -1,13 +1,69 @@
-.nav{
-  width: 100%;
+.App {
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  margin: 20px;
+}
+
+.nav {
+  background-color: #FF5252;
+  color: white;
+  padding: 10px;
+}
+
+.adder {
+  margin-top: 20px;
   display: flex;
-  background-color: #333;
-  color:#fff;
-  padding: 20px;
+  flex-direction: column;
+  align-items: center;
 }
-.basic{
-  width: 100%;
-  background-color: #777;
-  color:#fff;
-  padding: 20px;
+
+.adder h5 {
+  color: #333333;
+  margin-bottom: 5px;
 }
+
+.adder input {
+  width: 60%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #DBDBDB;
+  border-radius: 5px;
+}
+
+.adder button {
+  background-color: #FF5252;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.basic {
+  border: 1px solid #DBDBDB;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px #DBDBDB;
+}
+
+.basic h4 {
+  color: #333333;
+}
+
+.basic p {
+  color: #808080;
+  margin: 5px 0;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.modal {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px #DBDBDB;
+}
+
+/* Add more styles as needed */
