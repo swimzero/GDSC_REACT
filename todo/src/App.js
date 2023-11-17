@@ -1,3 +1,4 @@
+import { computeHeadingLevel } from '@testing-library/react';
 import './App.css';
 import { useState } from 'react';
 
@@ -16,9 +17,12 @@ function App() {
     }
   };
 
-  const goalDelete=()=>{
+  const deleteAll=()=>{
     setGoals([])
   }
+
+  const deleteOne =(index)=>{let copy=[...goals]; copy.splice(index,1); setGoals(copy)}
+
 
   return (
     <div className="App">
@@ -36,7 +40,7 @@ function App() {
         />
         <div className='buttons'>
         <button id='goalSetting' onClick={goalSetting}>목표설정</button>
-        <button id='goalDelete' onClick={goalDelete}>목표삭제</button>
+        <button id='deleteAll' onClick={deleteAll}>전체삭제</button>
         </div>
       </div>
 
@@ -51,6 +55,7 @@ function App() {
               [index]: !prevState[index] /*지피티가 바꿈*/
               }));
             }}>상세 목표</p>
+            <button className='delete1' onClick={()=>{deleteOne(index)}}>삭제</button>
 
             {modalState[index] ? <Modal goal={goal} key={index} /> : null}
           </div>
